@@ -69,6 +69,25 @@ Monitoring Prometheus · Grafana
 
 ---
 
+## 📊 부하 테스트 결과
+
+> JMeter 10,000 동시 사용자 시나리오 (Login → Queue → Reserve Seat)
+
+![JMeter Result](./jmeter_result.png)
+
+| 항목 | 수치 |
+|------|------|
+| 동시 요청 수 | 10,000명 |
+| 평균 응답 시간 | 155ms |
+| 최소 응답 시간 | 85ms |
+| 처리량 | 311.1 req/sec |
+| 초과 예매 건수 | **0건** |
+
+> Reserve Seat Error 99%는 좌석 수(100석) 초과 요청이 의도적으로 차단된 정상 동작입니다.  
+> 10,000명이 동시에 요청했지만 정확히 100석만 선점되었습니다.
+
+---
+
 ## 👤 개발자
 
 | 학번 | 이름 |
